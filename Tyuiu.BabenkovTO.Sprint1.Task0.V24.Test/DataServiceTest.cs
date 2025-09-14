@@ -8,7 +8,8 @@ namespace Tyuiu.BabenkovTO.Sprint1.Task0.V24.Test
         public void CheckCalculate()
         {
             DataService ds = new DataService();
-            Assert.AreEqual(2, ds.Calculate);
+            var res = ds.Calculate();
+            Assert.AreEqual(2, res);
         }
     }
 }

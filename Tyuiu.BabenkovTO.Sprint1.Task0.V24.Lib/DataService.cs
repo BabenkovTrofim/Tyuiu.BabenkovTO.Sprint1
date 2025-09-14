@@ -1,7 +1,11 @@
-﻿namespace Tyuiu.BabenkovTO.Sprint1.Task0.V24.Lib
+﻿using tyuiu.cources.programming.interfaces.Sprint1;
+namespace Tyuiu.BabenkovTO.Sprint1.Task0.V24.Lib
 {
-    public class DataService
+    public class DataService : ISprint1Task0V24
     {
-        public static 
+        public double Calculate()
+        {
+            return ((2 * 4) / 4) / 2 + 1;
+        }
     }
 }
