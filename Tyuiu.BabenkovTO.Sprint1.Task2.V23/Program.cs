@@ -1,29 +1,31 @@
-﻿using Tyuiu.BabenkovTO.Sprint1.Task0.V24.Lib;
+﻿using Tyuiu.BabenkovTO.Sprint1.Task2.V23.Lib;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        DataService ds = new DataService();
-
         Console.Title = "Спринт #1 | Выполнил: Бабенков Т. О. | ИИПб-25-1";
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #1                                                               *");
-        Console.WriteLine("* Тема: Базовые навыки работы в С#                                        *");
-        Console.WriteLine("* Задание #0                                                              *");
-        Console.WriteLine("* Вариант #24                                                             *");
+        Console.WriteLine("* Тема: Арифметические операторы в С#                                     *");
+        Console.WriteLine("* Задание #2                                                              *");
+        Console.WriteLine("* Вариант #23                                                             *");
         Console.WriteLine("* Выполнил: Бабенков Трофим Олегович | ИИПб-25-1                          *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
-        Console.WriteLine("* Написать программу, которая вычисляет выражение 2*4/4/2+1 и печатает    *");
-        Console.WriteLine("* результат на экране.                                                    *");
+        Console.WriteLine("* Написать программу, которая запрашивает у пользователя исходные данные, *");
+        Console.WriteLine("* выполняет указанные расчёты и печатает результат на экране.             *");
         Console.WriteLine("*                                                                         *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine("* ((2*4)/4)/2 + 1                                                         *");
+        int min;
+        Console.WriteLine("Укажите время в минутах:");
+        min = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine(ds.Calculate());
+        DataService ds = new DataService();
+        Console.WriteLine("Время в секундах:");
+        Console.WriteLine(ds.ConvertMinutesToSeconds(min));
     }
 }
